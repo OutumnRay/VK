@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mattermost-bot:
+    build: .
+    depends_on:
+      - tarantool
+    environment:
+      MATTERMOST_SERVER: "https://mattermost.example.com"
+      MATTERMOST_TOKEN: "your-bot-token"
+      TARANTOOL_ADDRESS: "tarantool:3301"
+    restart: always
+
+  tarantool:
+    image: tarantool/tarantool:latest
+    ports:
+      - "3302:3301"
+    restart: always
