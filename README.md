@@ -6,9 +6,10 @@
 2. Склонируйте репозиторий: git clone https://github.com/yourusername/mattermost-voting-bot.git
 cd mattermost-voting-bot
 3. Установите зависимости: go mod tidy
-4. Запустите Tarantool отдельно (если не используете Docker): tarantool
-5. Запустите бота: go run cmd/main.go
-6. Либо используйте Docker: docker-compose up --build
+4. Установите свой Token и необходимые параметры для бота в config.go
+5. Запустите Tarantool отдельно (если не используете Docker): tarantool
+6. Запустите бота: go run cmd/main.go
+7. Либо используйте Docker: docker-compose up --build
 
 ## Команды
 
